@@ -1,0 +1,9 @@
+# dsh-deepseek-cost-zxh —— 把本插件插进 profile 组合。
+#
+# 行按【包名】引用（不是相对路径）：patch 只贡献配置，不改变 loader 的解析基准目录。
+# id 用短名，name 才是包名。
+#
+# 安装：dsh plugin --profile web add dsh-deepseek-cost-zxh
+- insert:
+    - id: dsh-deepseek-cost-zxh
+      name: dsh-deepseek-cost-zxh

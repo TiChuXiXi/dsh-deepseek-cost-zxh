@@ -1,0 +1,56 @@
+{
+  "name": "dsh-deepseek-cost-zxh",
+  "version": "0.1.0",
+  "description": "在 DSH Web 的「Token 用量」弹窗最后一行追加「实际花费」：按 DeepSeek 官方价目（含高峰/空闲时段）估算本次会话的花费。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "web-ui",
+    "deepseek",
+    "token-cost",
+    "billing"
+  ],
+  "author": "TiChuXiXi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiChuXiXi/dsh-deepseek-cost-zxh.git"
+  },
+  "homepage": "https://github.com/TiChuXiXi/dsh-deepseek-cost-zxh#readme",
+  "bugs": {
+    "url": "https://github.com/TiChuXiXi/dsh-deepseek-cost-zxh/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
